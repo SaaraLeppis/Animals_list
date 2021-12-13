@@ -5,26 +5,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --cool-tone: #a7c6d9;
+  --back-ground: #3a8c8c64;
+  --green-tone: #3a8c8cd0;
+  --lt-orange: #f27141;
+  --orange: #d90404;
+  --brown: #400101;
+}
 
 body {
   margin: 0;
   font-family: "Dosis", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--back-ground);
 }
+/* === HEADER === */
 
-header,
-footer {
+header {
   padding: 2rem;
-  text-align: center;
+  background: var(--cool-tone);
 }
-.main-nav {
-  display: flex;
-  justify-content: space-around;
+header li {
   list-style: none;
-}
-ul {
+  text-decoration: none;
   display: inline-block;
+  padding: 0 1em;
 }
 
 .animalsList {
@@ -62,4 +69,21 @@ ul {
 .card img {
   max-width: 100%;
   border-radius: 5px 5px 0 0;
+}
+/* ==== FOOTER ====*/
+footer {
+  background: var(--green-tone);
+  padding: 2em;
+  text-align: center;
+  height: 8em;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+footer h3 {
+  font-size: 2em;
+}
+footer a:hover {
+  cursor: pointer;
+  color: var(--orange);
 }

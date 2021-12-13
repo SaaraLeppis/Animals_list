@@ -3,9 +3,13 @@ import React from "react";
 const Footer = () => {
     return (
         <div>
-            <h1>I am footer</h1>
+            <footer>
+                <h3>Animals</h3>
+                <a href={"https://www.linkedin.com/in/saara-leppihalme/"}>&#169; SaaraLeppis 2021</a>
 
-        </div>
+            </footer>
+
+        </div >
     )
 }
 export default Footer;
