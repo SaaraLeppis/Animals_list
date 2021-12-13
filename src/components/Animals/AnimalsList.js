@@ -37,7 +37,6 @@ class AnimalsList extends Component {
 
                 <div className="wrapper">
                     <Switch>
-
                         <Route exact path={this.props.match.path}>
                             <input type="text" onChange={this.searchInputHandler} />
                             <div className="animals-list">{animalslisting}</div>
