@@ -18,12 +18,16 @@ const AnimalSingle = () => {
                 <img src=
                     {`https://source.unsplash.com/1600x900/?${animal}`} alt="one animal" />
             </div>
-            <p>Check here if wikipedia has page</p>
-            <div>
-                <button onClick={() => history.goBack()}>
-                    Back to animals
-                </button>
-            </div>
+
+            <p>Clicking here you can find what facts
+                <a href={`https://www.wikipedia.org/wiki/${animal}`} target="_blank" rel="noreferrer">Wikipedia </a>
+                has for {animal}</p>
+
+
+            <button onClick={() => history.goBack()}>
+                Back to animals
+            </button>
+
         </div>
     );
 };

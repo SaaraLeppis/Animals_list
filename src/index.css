@@ -13,6 +13,18 @@
   --orange: #d90404;
   --brown: #400101;
 }
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+#root {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  padding-bottom: 51px;
+}
 
 body {
   margin: 0;
@@ -21,37 +33,71 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--back-ground);
 }
+p {
+  font-size: 1.6em;
+}
 /* === HEADER === */
 header {
   padding: 2rem;
-  background: var(--cool-tone);
+  background: var(--back-ground);
 }
 header li {
   list-style: none;
-  text-decoration: none;
   display: inline-block;
   padding: 0 1em;
-  text-align: end;
+  font-size: 1.6em;
+}
+ul {
+  display: flex;
+  justify-content: end;
+}
+li a {
+  text-decoration: none;
+  color: var(--brown);
+  padding: 0 1em;
+  transition: ease-in all 0.2s;
+}
+li a:hover {
+  color: black;
+  font-weight: bold;
+  border-bottom: 2px solid var(--back-ground);
 }
 
 /* === HOME === */
 .home-wrapper {
   background-image: url(./assets/pictures/katie-treadway-EwE4tBYh3ms-unsplash.jpg);
-  background-size: 100%;
-  padding: 20em 20em;
+  height: 78vh;
   background-repeat: no-repeat;
   background-position: bottom center;
+  background-size: cover;
 }
-h2 {
+.home-wrapper h2 {
+  padding: 2em;
   font-size: 4em;
   color: var(--orange);
+}
+
+/* ==== ANIMAL LIST ==== */
+
+.list-input-wrap {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+input {
+  width: 20%;
+  height: 3em;
+  border-radius: 5px;
+  margin: 1em;
+  padding: 0.4em 1em;
+  font-size: 1.2em;
 }
 .animals-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  padding: 0 2rem;
+  padding: 3em 2rem;
 }
 
 .card {
@@ -62,7 +108,7 @@ h2 {
 
   margin: 1rem;
   text-transform: capitalize;
-  filter: grayscale(60%);
+  filter: grayscale(70%);
   transition: all 0.5s;
 }
 
@@ -74,50 +120,74 @@ h2 {
   text-transform: capitalize;
   filter: grayscale(0%);
   cursor: pointer;
+  color: var(--orange);
 }
 .card h2,
 a {
   padding: 1rem;
 }
-
 .card img {
   max-width: 100%;
-}
-/* ==== ANIMAL LIST ==== */
-input {
-  width: 20%;
-  height: 4em;
 }
 /* ==== ANIMAL SINGLE ==== */
 .single-animal {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  align-items: center;
+}
+.single-animal p {
+  padding: 1em;
 }
 .animal-image img {
   width: 50%;
-  margin: 5%;
+  margin: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.single-text {
+  display: inline-block;
 }
 .animal-span {
   text-transform: uppercase;
+  color: var(--brown);
+}
+button {
+  border-radius: 5px;
+  padding: 0.5em;
+  background-color: var(--back-ground);
+  color: var(--brown);
+  box-shadow: 1px 1px 8px #444444;
+  font-size: 1.2em;
+}
+button:hover {
+  box-shadow: 0px 0px 15px #444444;
+  background-color: var(--green-tone);
 }
 
+/* ==== ABOUT ==== */
+.about {
+  padding: 4em;
+  margin: 0.6em;
+}
+.about p {
+  font-size: 1.4em;
+}
 /* ==== FOOTER ==== */
 footer {
   background: var(--green-tone);
 
   text-align: center;
+  padding: 1.2em;
   height: 10%;
   width: 100vw;
   position: fixed;
   bottom: 0;
   left: 0;
 }
-footer h3 {
-  font-size: 2em;
-}
+
 footer a:hover {
   cursor: pointer;
-  color: var(--orange);
+  color: var(--lt-orange);
 }
