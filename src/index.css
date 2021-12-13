@@ -22,7 +22,6 @@ body {
   background: var(--back-ground);
 }
 /* === HEADER === */
-
 header {
   padding: 2rem;
   background: var(--cool-tone);
@@ -32,53 +31,88 @@ header li {
   text-decoration: none;
   display: inline-block;
   padding: 0 1em;
+  text-align: end;
 }
 
-.animalsList {
+/* === HOME === */
+.home-wrapper {
+  background-image: url(./assets/pictures/katie-treadway-EwE4tBYh3ms-unsplash.jpg);
+  background-size: 100%;
+  padding: 20em 20em;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+h2 {
+  font-size: 4em;
+  color: var(--orange);
+}
+.animals-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   padding: 0 2rem;
 }
 
 .card {
   background-color: snow;
   box-shadow: 0 0 5px rgb(121, 121, 121);
-  width: 200px;
+  width: 250px;
   border-radius: 5px;
-  display: inline-block;
+
   margin: 1rem;
   text-transform: capitalize;
-  filter: grayscale(100%);
+  filter: grayscale(60%);
   transition: all 0.5s;
 }
 
 .card:hover {
   background-color: snow;
-  box-shadow: 0 0 20px rgb(121, 121, 121);
+  box-shadow: 0 0 30px rgb(121, 121, 121);
   border-radius: 5px;
   margin: 1rem;
   text-transform: capitalize;
   filter: grayscale(0%);
   cursor: pointer;
 }
-.card h2 {
+.card h2,
+a {
   padding: 1rem;
 }
 
 .card img {
   max-width: 100%;
-  border-radius: 5px 5px 0 0;
 }
-/* ==== FOOTER ====*/
+/* ==== ANIMAL LIST ==== */
+input {
+  width: 20%;
+  height: 4em;
+}
+/* ==== ANIMAL SINGLE ==== */
+.single-animal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.animal-image img {
+  width: 50%;
+  margin: 5%;
+}
+.animal-span {
+  text-transform: uppercase;
+}
+
+/* ==== FOOTER ==== */
 footer {
   background: var(--green-tone);
-  padding: 2em;
+
   text-align: center;
-  height: 8em;
+  height: 10%;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 0;
 }
 footer h3 {
   font-size: 2em;
